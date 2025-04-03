@@ -1,33 +1,71 @@
 from abc import ABC, abstractmethod
-
-from src.core.connections.database import Sessionable
+from contextlib import AbstractAsyncContextManager
 from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
 from src.models.base_model import BaseModel
-from typing import TypeVar, Type
+from typing import Callable, TypeVar, Type, Optional, List
 
 T = TypeVar("T", bound=BaseModel)
 
-class BaseRepository(ABC):
-    def __init__(self, sessionable_database: Sessionable, model: Type[T]) -> None:
-        self.database = sessionable_database
+class BaseRepository:
+    def __init__(self, session_factory: Callable[..., AbstractAsyncContextManager[AsyncSession]], model: Type[T]) -> None:
+        self.session_factory = session_factory
         self.model = model
 
-        
-    @abstractmethod
     async def create(self, obj: T) -> T:
-        pass
+        async with self.session_factory() as session:
+            try:
+                await session.add(obj)
+            except Exception as e:
+                await session.rollback()
+                raise e
+            await session.commit()
+            await session.refresh(obj)
 
-    @abstractmethod
-    async def get(self, id: int) -> T:
-        pass
+            return obj
+            
 
-    @abstractmethod
+    async def get(self, id: int) -> Optional[T]:
+        async with self.session_factory() as session:
+            obj = await session.get(self.model, id)
+            return obj
+
     async def update(self, obj: T) -> T:
-        pass
+        async with self.session_factory() as session:
+            try:
+                await session.merge(obj)
+            except Exception as e:
+                await session.rollback()
+                raise e
+            await session.commit()
+            await session.refresh(obj)
 
-    @abstractmethod
+            return obj
+
     async def delete(self, id: int) -> None:
-        pass
+        async with self.session_factory() as session:
+            obj = await session.get(self.model, id)
+            if obj:
+                try:
+                    await session.delete(obj)
+                except Exception as e:
+                    await session.rollback()
+                    raise e
+                await session.commit()
+            else:
+                raise ValueError(f"Object with id {id} not found")
+
+    async def list(self, limit: int = 10, offset: int = 0) -> List[T]:
+        async with self.session_factory() as session:
+            query = select(self.model).limit(limit).offset(offset)
+            try:
+                result = await session.execute(query)
+            except Exception as e:
+                await session.rollback()
+                raise e
+            await session.commit()
+            return result.scalars().all()
+
 
     
 
