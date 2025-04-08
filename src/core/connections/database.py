@@ -18,24 +18,29 @@ class Database(Connection, Sessionable):
             settings.db_async_url(),
             echo=False,
         )
-        self.session_factory = async_sessionmaker(self.engine, class_=AsyncSession, expire_on_commit=False)
+        self._session_factory = async_sessionmaker(self.engine, class_=AsyncSession, expire_on_commit=False)
 
     def session_factory(self) -> async_sessionmaker:
-        return self.session_factory
+        return self._session_factory
 
     async def connect(self):
         try:
             async with self.engine.connect() as conn:
                 await conn.execute(text("SELECT 1"))
                 logger.info(f"Database connection URL: {settings.db_async_url()}")
-            print("Connected to the database")
         except Exception as e:
             print(f"Failed to connect to the database: {e}")
             raise e
 
     
     async def close(self):
-        await self.engine.dispose()
+        try:
+            await self.engine.dispose()
+            logger.info("Disconnected from the database")
+        except Exception as e:
+            logger.error(f"Failed to disconnect from the database: {e}")
+            raise e
+
 
 
 

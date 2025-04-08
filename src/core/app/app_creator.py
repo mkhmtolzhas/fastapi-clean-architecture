@@ -2,7 +2,7 @@ from fastapi import FastAPI, APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 from .lifespan import lifespan
-from src.api.api_router import router as api_router
+from src.api.http.api_router import router as api_router
 from src.core.logger.logger import logger, Logger
 
 class AppCreator:
