@@ -50,7 +50,7 @@ class DomainRepository(BaseRepository):
                 setattr(domain, key, value)
             await session.commit()
             await session.refresh(domain)
-            return await model_to_schema(domain, DomainReadSchema)
+            return model_to_schema(domain, DomainReadSchema)
         
     async def delete(self, id: int) -> bool:
         """

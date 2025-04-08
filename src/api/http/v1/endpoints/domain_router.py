@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
-from src.usecases.domain_usecase import get_domain_usecase, DomainUseCase
+from src.usecases.domain_usecase import get_domain_usecase
+from src.usecases.base_usecase import BaseUseCase
 from src.schemas.base_schema import ResponseSchema
 from src.schemas.domain_schema import DomainCreateSchema, DomainUpdateSchema, DomainReadSchema
 from typing import List
@@ -9,7 +10,7 @@ router = APIRouter(prefix="/domains", tags=["Domains"])
 @router.post("/", response_model=ResponseSchema[DomainReadSchema])
 async def create_domain(
     obj: DomainCreateSchema,
-    usecase: DomainUseCase = Depends(get_domain_usecase)
+    usecase: BaseUseCase = Depends(get_domain_usecase)
 ) -> ResponseSchema[DomainReadSchema]:
     """
     Create a domain.
@@ -25,7 +26,7 @@ async def create_domain(
 @router.get("/{id}", response_model=ResponseSchema[DomainReadSchema])
 async def get_domain(
     id: int,
-    usecase: DomainUseCase = Depends(get_domain_usecase)
+    usecase: BaseUseCase = Depends(get_domain_usecase)
 ) -> ResponseSchema[DomainReadSchema]:
     """
     Get a domain by ID.
@@ -42,7 +43,7 @@ async def get_domain(
 @router.put("/", response_model=ResponseSchema[DomainReadSchema])
 async def update_domain(
     obj: DomainUpdateSchema,
-    usecase: DomainUseCase = Depends(get_domain_usecase)
+    usecase: BaseUseCase = Depends(get_domain_usecase)
 ) -> ResponseSchema[DomainReadSchema]:
     """
     Update a domain.
@@ -58,7 +59,7 @@ async def update_domain(
 @router.delete("/{id}", response_model=ResponseSchema[bool])
 async def delete_domain(
     id: int,
-    usecase: DomainUseCase = Depends(get_domain_usecase)
+    usecase: BaseUseCase = Depends(get_domain_usecase)
 ) -> ResponseSchema[bool]:
     """
     Delete a domain by ID.
@@ -75,7 +76,7 @@ async def delete_domain(
 async def list_domains(
     page: int = 1,
     limit: int = 10,
-    usecase: DomainUseCase = Depends(get_domain_usecase)
+    usecase: BaseUseCase = Depends(get_domain_usecase)
 ) -> ResponseSchema[List[DomainReadSchema]]:
     """
     List domains.
