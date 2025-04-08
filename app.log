@@ -1,0 +1,9 @@
+2025-04-08 17:49:31,294 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-08 17:49:31,308 - INFO - Starting up the application...
+2025-04-08 17:49:31,318 - INFO - Database connection URL: postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+2025-04-08 17:49:31,319 - INFO - Connected to Redis
+2025-04-08 17:49:31,319 - INFO - Application started up successfully.
+2025-04-08 17:49:32,326 - INFO - Shutting down the application...
+2025-04-08 17:49:32,332 - INFO - Disconnected from the database
+2025-04-08 17:49:32,333 - INFO - Disconnected from Redis
+2025-04-08 17:49:32,333 - INFO - Application shut down successfully.
