@@ -64,7 +64,7 @@ async def delete_domain(
     Delete a domain by ID.
     """
     response = await usecase.delete_by_id(id)
-    return ResponseSchema[DomainReadSchema](
+    return ResponseSchema[bool](
         status="ok",
         message="succes",
         data=response
