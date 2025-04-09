@@ -13,6 +13,55 @@ This repository provides a boilerplate for building web applications using [Fast
 ## Project Structure
 
 ```bash
+├── src
+│   ├── api
+│   │   ├── http
+│   │   │   ├── v1
+│   │   │   │   ├── endpoints
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── domain_router.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   └── router.py
+│   │   │   ├── v2
+│   │   │   ├── __init__.py
+│   │   │   ├── api_router.py
+│   │   │   ├── dependencies.py
+│   ├── core
+│   │   ├── app
+│   │   │   ├── __init__.py
+│   │   │   ├── app_creator.py
+│   │   │   ├── lifespan.py
+│   │   ├── connections
+│   │   │   ├── __init__.py
+│   │   │   ├── connection.py
+│   │   │   ├── postgres_connection.py
+│   │   │   ├── redis_connection.py
+│   │   ├── logger
+│   │   │   ├── __init__.py
+│   │   │   ├── logger.py
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   ├── models
+│   │   ├── __init__.py
+│   │   ├── base_model.py
+│   │   ├── domain_model.py
+│   ├── repositories
+│   │   ├── __init__.py
+│   │   ├── base_repositiry.py
+│   │   ├── domain_repository.py
+│   ├── schemas
+│   │   ├── __init__.py
+│   │   ├── base_schema.py
+│   │   ├── domain_schema.py
+│   ├── usecases
+│   │   ├── __init__.py
+│   │   ├── base_usecase.py
+│   │   ├── domain_usecase.py
+│   ├── utils
+│   │   ├── __init__.py
+│   │   ├── model_adapter.py
+│   ├── __init__.py
+│   ├── main.py
 ├── alembic.ini
 ├── app.log
 ├── docker-compose.yaml
@@ -20,56 +69,7 @@ This repository provides a boilerplate for building web applications using [Fast
 ├── migrations
 ├── poetry.lock
 ├── pyproject.toml
-├── README.md
-└── src
-    ├── api
-    │   ├── http
-    │   │   ├── api_router.py
-    │   │   ├── dependencies.py
-    │   │   ├── __init__.py
-    │   │   ├── v1
-    │   │   │   ├── endpoints
-    │   │   │   │   ├── domain_router.py
-    │   │   │   │   ├── __init__.py
-    │   │   │   ├── __init__.py
-    │   │   │   └── router.py
-    │   │   └── v2
-    ├── core
-    │   ├── app
-    │   │   ├── app_creator.py
-    │   │   ├── __init__.py
-    │   │   ├── lifespan.py
-    │   ├── connections
-    │   │   ├── cache.py
-    │   │   ├── connection.py
-    │   │   ├── database.py
-    │   │   ├── __init__.py
-    │   ├── container.py
-    │   ├── __init__.py
-    │   ├── logger
-    │   │   ├── __init__.py
-    │   │   ├── logger.py
-    │   ├── config.py
-    ├── __init__.py
-    ├── main.py
-    ├── models
-    │   ├── base_model.py
-    │   ├── domain_model.py
-    │   ├── __init__.py
-    ├── repositories
-    │   ├── base_repositiry.py
-    │   ├── domain_repository.py
-    │   ├── __init__.py
-    ├── schemas
-    │   ├── base_schema.py
-    │   ├── domain_schema.py
-    │   ├── __init__.py
-    ├── usecases
-    │   ├── base_usecase.py
-    │   ├── domain_usecase.py
-    └── utils
-        ├── __init__.py
-        ├── model_adapter.py
+└── README.md
 ```
 
 ## Installation
