@@ -1,18 +1,11 @@
-from abc import ABC, abstractmethod
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine, async_sessionmaker
 from src.core.logger.logger import logger
 from src.core.config import settings, Settings
-from .connection import Connection
+from .connection import Connection, Sessionable
 
 
-class Sessionable(ABC):
-    @abstractmethod
-    def session_factory(self) -> async_sessionmaker:
-        raise NotImplementedError("Subclasses must implement get_session method")
-
-
-class Database(Connection, Sessionable):
+class PostgresConnection(Connection, Sessionable):
     def __init__(self, settings: Settings) -> None:
         self.engine = create_async_engine(
             settings.db_async_url(),
@@ -42,7 +35,5 @@ class Database(Connection, Sessionable):
             raise e
 
 
-
-
-database = Database(settings)
+postgres = PostgresConnection(settings)
 

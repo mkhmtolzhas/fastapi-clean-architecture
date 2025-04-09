@@ -1,7 +1,7 @@
 from contextlib import asynccontextmanager
 from ..connections.connection import Connection
-from ..connections.database import database
-from ..connections.cache import cache
+from ..connections.postgres_connection import postgres
+from ..connections.redis_connection import redis
 from ..logger.logger import logger
 
 
@@ -10,13 +10,13 @@ from ..logger.logger import logger
 @asynccontextmanager
 async def lifespan(app):
     logger.info("Starting up the application...")
-    await startup(database)
-    await startup(cache)
+    await startup(postgres)
+    await startup(redis)
     logger.info("Application started up successfully.")
     yield
     logger.info("Shutting down the application...")
-    await shutdown(database)
-    await shutdown(cache)
+    await shutdown(postgres)
+    await shutdown(redis)
     logger.info("Application shut down successfully.")
 
 

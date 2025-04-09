@@ -3,7 +3,7 @@ from ..config import settings, Settings
 from .connection import Connection
 from ..logger.logger import logger
 
-class Cache(Connection):
+class RedisConnection(Connection):
     def __init__(self, settings: Settings):
         self.redis = Redis.from_url(
             url=settings.redis_url(),
@@ -28,4 +28,4 @@ class Cache(Connection):
             raise e
 
 
-cache = Cache(settings=settings)
+redis = RedisConnection(settings=settings)

@@ -7,3 +7,141 @@
 2025-04-08 17:49:32,332 - INFO - Disconnected from the database
 2025-04-08 17:49:32,333 - INFO - Disconnected from Redis
 2025-04-08 17:49:32,333 - INFO - Application shut down successfully.
+2025-04-08 17:59:10,398 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-08 17:59:10,412 - INFO - Starting up the application...
+2025-04-08 17:59:10,422 - INFO - Database connection URL: postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+2025-04-08 17:59:10,423 - INFO - Connected to Redis
+2025-04-08 17:59:10,424 - INFO - Application started up successfully.
+2025-04-08 17:59:26,744 - INFO - Request: GET http://127.0.0.1:8000/redox
+2025-04-08 17:59:26,745 - INFO - Response: 404
+2025-04-08 17:59:26,771 - INFO - Request: GET http://127.0.0.1:8000/favicon.ico
+2025-04-08 17:59:26,771 - INFO - Response: 404
+2025-04-08 17:59:31,243 - INFO - Request: GET http://127.0.0.1:8000/redoc
+2025-04-08 17:59:31,243 - INFO - Response: 200
+2025-04-08 17:59:32,641 - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-04-08 17:59:32,644 - INFO - Response: 200
+2025-04-08 18:01:35,341 - INFO - Shutting down the application...
+2025-04-08 18:01:35,347 - INFO - Disconnected from the database
+2025-04-08 18:01:35,347 - INFO - Disconnected from Redis
+2025-04-08 18:01:35,347 - INFO - Application shut down successfully.
+2025-04-08 19:47:07,310 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-08 19:47:07,347 - INFO - Starting up the application...
+2025-04-08 19:47:07,381 - INFO - Database connection URL: postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+2025-04-08 19:47:07,384 - INFO - Connected to Redis
+2025-04-08 19:47:07,384 - INFO - Application started up successfully.
+2025-04-08 19:47:10,874 - INFO - Request: GET http://127.0.0.1:8000/
+2025-04-08 19:47:10,875 - INFO - Response: 404
+2025-04-08 19:47:11,093 - INFO - Request: GET http://127.0.0.1:8000/favicon.ico
+2025-04-08 19:47:11,093 - INFO - Response: 404
+2025-04-08 19:47:33,674 - INFO - Request: GET http://127.0.0.1:8000/
+2025-04-08 19:47:33,674 - INFO - Response: 404
+2025-04-08 19:47:33,976 - INFO - Request: GET http://127.0.0.1:8000/favicon.ico
+2025-04-08 19:47:33,977 - INFO - Response: 404
+2025-04-08 19:47:39,636 - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-04-08 19:47:39,636 - INFO - Response: 200
+2025-04-08 19:47:39,937 - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-04-08 19:47:39,947 - INFO - Response: 200
+2025-04-08 19:48:03,051 - INFO - Request: GET http://127.0.0.1:8000/api/v1/domains/?page=1&limit=10
+2025-04-08 19:48:03,063 - INFO - Response: 200
+2025-04-08 19:49:08,154 - INFO - Shutting down the application...
+2025-04-08 19:49:08,162 - INFO - Disconnected from the database
+2025-04-08 19:49:08,163 - INFO - Disconnected from Redis
+2025-04-08 19:49:08,163 - INFO - Application shut down successfully.
+2025-04-08 20:13:29,539 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-08 20:13:29,575 - INFO - Starting up the application...
+2025-04-08 20:13:36,645 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-08 20:13:36,672 - INFO - Starting up the application...
+2025-04-08 20:14:17,331 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-08 20:14:17,358 - INFO - Starting up the application...
+2025-04-08 20:14:17,384 - INFO - Database connection URL: postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+2025-04-08 20:14:17,386 - INFO - Connected to Redis
+2025-04-08 20:14:17,386 - INFO - Application started up successfully.
+2025-04-08 20:14:20,015 - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-04-08 20:14:20,015 - INFO - Response: 200
+2025-04-08 20:14:20,209 - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-04-08 20:14:20,221 - INFO - Response: 200
+2025-04-08 20:14:35,527 - INFO - Request: POST http://127.0.0.1:8000/api/v1/domains/
+2025-04-08 20:14:35,549 - INFO - Response: 200
+2025-04-08 20:14:40,280 - INFO - Shutting down the application...
+2025-04-08 20:14:40,284 - INFO - Disconnected from the database
+2025-04-08 20:14:40,284 - INFO - Disconnected from Redis
+2025-04-08 20:14:40,285 - INFO - Application shut down successfully.
+2025-04-09 15:14:18,630 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-09 15:14:18,658 - INFO - Starting up the application...
+2025-04-09 15:14:40,712 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-09 15:14:40,741 - INFO - Starting up the application...
+2025-04-09 15:14:40,772 - INFO - Database connection URL: postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+2025-04-09 15:14:40,775 - INFO - Connected to Redis
+2025-04-09 15:14:40,775 - INFO - Application started up successfully.
+2025-04-09 15:14:42,263 - INFO - Request: GET http://127.0.0.1:8000/
+2025-04-09 15:14:42,264 - INFO - Response: 404
+2025-04-09 15:14:42,334 - INFO - Request: GET http://127.0.0.1:8000/favicon.ico
+2025-04-09 15:14:42,335 - INFO - Response: 404
+2025-04-09 15:14:47,410 - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-04-09 15:14:47,410 - INFO - Response: 200
+2025-04-09 15:14:47,578 - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-04-09 15:14:47,585 - INFO - Response: 200
+2025-04-09 15:15:49,285 - INFO - Request: POST http://127.0.0.1:8000/api/v1/domains/
+2025-04-09 15:15:49,319 - INFO - Response: 200
+2025-04-09 15:16:11,618 - INFO - Request: GET http://127.0.0.1:8000/api/v1/domains/?page=1&limit=10
+2025-04-09 15:16:11,625 - INFO - Response: 200
+2025-04-09 15:18:40,627 - INFO - Request: GET http://127.0.0.1:8000/redox
+2025-04-09 15:18:40,627 - INFO - Response: 404
+2025-04-09 15:18:40,680 - INFO - Request: GET http://127.0.0.1:8000/favicon.ico
+2025-04-09 15:18:40,681 - INFO - Response: 404
+2025-04-09 15:18:46,225 - INFO - Request: GET http://127.0.0.1:8000/redoc
+2025-04-09 15:18:46,226 - INFO - Response: 200
+2025-04-09 15:18:46,426 - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-04-09 15:18:46,426 - INFO - Response: 200
+2025-04-09 15:20:18,255 - INFO - Shutting down the application...
+2025-04-09 15:20:18,260 - INFO - Disconnected from the database
+2025-04-09 15:20:18,261 - INFO - Disconnected from Redis
+2025-04-09 15:20:18,261 - INFO - Application shut down successfully.
+2025-04-09 23:02:17,748 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-09 23:02:17,779 - INFO - Starting up the application...
+2025-04-09 23:02:17,803 - INFO - Database connection URL: postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+2025-04-09 23:02:17,804 - INFO - Connected to Redis
+2025-04-09 23:02:17,805 - INFO - Application started up successfully.
+2025-04-09 23:03:07,403 - INFO - Shutting down the application...
+2025-04-09 23:03:07,410 - INFO - Disconnected from the database
+2025-04-09 23:03:07,410 - INFO - Disconnected from Redis
+2025-04-09 23:03:07,410 - INFO - Application shut down successfully.
+2025-04-09 23:04:51,336 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-09 23:04:51,364 - INFO - Starting up the application...
+2025-04-09 23:04:51,381 - INFO - Database connection URL: postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+2025-04-09 23:04:51,382 - INFO - Connected to Redis
+2025-04-09 23:04:51,382 - INFO - Application started up successfully.
+2025-04-09 23:04:53,091 - INFO - Shutting down the application...
+2025-04-09 23:04:53,095 - INFO - Disconnected from the database
+2025-04-09 23:04:53,095 - INFO - Disconnected from Redis
+2025-04-09 23:04:53,096 - INFO - Application shut down successfully.
+2025-04-09 23:06:43,870 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-09 23:07:47,185 - INFO - Redis URL: redis://localhost:6379/0
+2025-04-09 23:07:47,216 - INFO - Starting up the application...
+2025-04-09 23:07:47,233 - INFO - Database connection URL: postgresql+asyncpg://postgres:postgres@localhost:5432/postgres
+2025-04-09 23:07:47,235 - INFO - Connected to Redis
+2025-04-09 23:07:47,235 - INFO - Application started up successfully.
+2025-04-09 23:07:50,690 - INFO - Request: GET http://127.0.0.1:8000/
+2025-04-09 23:07:50,691 - INFO - Response: 404
+2025-04-09 23:07:50,762 - INFO - Request: GET http://127.0.0.1:8000/favicon.ico
+2025-04-09 23:07:50,763 - INFO - Response: 404
+2025-04-09 23:09:21,554 - INFO - Request: GET http://127.0.0.1:8000/docs
+2025-04-09 23:09:21,554 - INFO - Response: 200
+2025-04-09 23:09:21,739 - INFO - Request: GET http://127.0.0.1:8000/openapi.json
+2025-04-09 23:09:21,747 - INFO - Response: 200
+2025-04-09 23:09:41,112 - INFO - Request: POST http://127.0.0.1:8000/api/v1/domains/
+2025-04-09 23:09:41,141 - INFO - Response: 200
+2025-04-09 23:10:09,612 - INFO - Request: GET http://127.0.0.1:8000/api/v1/domains/?page=1&limit=10
+2025-04-09 23:10:09,617 - INFO - Response: 200
+2025-04-09 23:10:16,403 - INFO - Request: GET http://127.0.0.1:8000/api/v1/domains/?page=1&limit=10
+2025-04-09 23:10:16,406 - INFO - Response: 200
+2025-04-09 23:10:30,349 - INFO - Request: GET http://127.0.0.1:8000/api/v1/domains/11
+2025-04-09 23:10:30,352 - INFO - Response: 200
+2025-04-09 23:10:37,200 - INFO - Request: GET http://127.0.0.1:8000/api/v1/domains/?page=2&limit=10
+2025-04-09 23:10:37,202 - INFO - Response: 200
+2025-04-09 23:10:49,072 - INFO - Request: GET http://127.0.0.1:8000/api/
+2025-04-09 23:10:49,072 - INFO - Response: 200
+2025-04-09 23:11:03,374 - INFO - Shutting down the application...
+2025-04-09 23:11:03,378 - INFO - Disconnected from the database
+2025-04-09 23:11:03,379 - INFO - Disconnected from Redis
+2025-04-09 23:11:03,379 - INFO - Application shut down successfully.

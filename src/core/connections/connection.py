@@ -10,3 +10,10 @@ class Connection(ABC):
     async def close(self):
         """Close the connection."""
         pass
+
+
+
+class Sessionable(ABC):
+    @abstractmethod
+    def session_factory(self):
+        raise NotImplementedError("Subclasses must implement get_session method")

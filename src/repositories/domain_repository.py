@@ -7,7 +7,7 @@ from src.utils.model_adapter import model_to_schema
 from src.models.domain_model import DomainModel
 from .base_repositiry import BaseRepository
 from sqlalchemy.ext.asyncio import AsyncSession
-from src.core.connections.database import database
+from src.core.connections.postgres_connection import postgres
 
 
 class DomainRepository(BaseRepository):
@@ -73,5 +73,5 @@ class DomainRepository(BaseRepository):
             return [model_to_schema(domain, DomainReadSchema) for domain in domains]
     
 
-domain_repository = DomainRepository(database.session_factory())
+domain_repository = DomainRepository(postgres.session_factory())
 
